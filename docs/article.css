@@ -1,0 +1,172 @@
+/*
+    :::     :::::::::  ::::::::::: :::::::::::  ::::::::  :::        :::::::::: 
+  :+: :+:   :+:    :+:     :+:         :+:     :+:    :+: :+:        :+:        
+ +:+   +:+  +:+    +:+     +:+         +:+     +:+        +:+        +:+        
++#++:++#++: +#++:++#:      +#+         +#+     +#+        +#+        +#++:++#   
++#+     +#+ +#+    +#+     +#+         +#+     +#+        +#+        +#+        
+#+#     #+# #+#    #+#     #+#         #+#     #+#    #+# #+#        #+#        
+###     ### ###    ###     ###     ###########  ########  ########## ########## 
+
+The 'article.html' page uses this css.
+*/
+
+.article {
+  display: block;
+  margin: 4vw 2vw 8vw 4vw;
+  width: 58vw;
+  background: #004785;
+  float: left;
+}
+
+.header {
+  height: 24vw;
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.header img {
+  float: left;
+  width: 58vw;
+  height: 24vw;
+  object-position: center;
+  object-fit: cover;
+  user-select: none;
+}
+
+.title {
+  display: inline;
+  position: absolute;
+  width: inherit;
+}
+
+.title h1 {
+  margin: 0;
+  margin-left: 1vw;
+  text-align: left;
+  font-size: 3vw;
+  z-index: 10; /* Put this in front of the image. */
+  transform: translateY(-3vw);
+}
+
+.author-date {
+  display: inline-flex;
+  position: absolute;
+  width: 58vw;
+  justify-content: space-between;
+}
+
+.author h2 {
+  margin: 0;
+  padding-left: 1vw;
+  padding-bottom: 1vw;
+  text-align: center;
+  font-size: 1.5vw;
+  z-index: 10; /* Put this in front of the image. */
+}
+
+.date h2 {
+  margin: 0;
+  padding-right: 1vw;
+  padding-bottom: 1vw;
+  text-align: center;
+  font-size: 1.5vw;
+  z-index: 10; /* Put this in front of the image. */
+}
+
+.text p {
+  padding: 2vw;
+  margin: 0;
+  font-size: 1.4vw;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.sidebar {
+  display: block;
+  margin: 4vw 4vw 2vw 2vw;
+  width: 29vw;
+  background: #004785;
+  float: left;
+  height: auto;
+}
+
+.sidebar-object {
+  margin-left: 2vw;
+  width: 25vw;
+  height: 25vw;
+  background: #003566;
+}
+
+/**********************/
+/*   Random Article   */
+/**********************/
+
+.random-article {
+  margin: 2vw;
+  display: flex;
+  float: left;
+  width: 25vw;
+  height: 25vw;
+  background: #004785;
+  text-align: justify;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.random-div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: top;
+  float: left;
+  height: 25vw; /* This should be a magic number to prevent lines from overflowing, but it doesn't work!  TODO: Fix the bug below where line height is changed from zooming. */
+  width: 25vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.random-article i {
+  display: inline-block;
+  font-size: 2.5vw;
+  padding: 0 0.4vw 0 0;
+  z-index: 1;
+}
+
+.random-article h1 {
+  padding: 0;
+  margin: 0.4vw;
+  text-align: center;
+  overflow: hidden;
+  font-size: 2vw;
+  z-index: 1;
+}
+
+.random-article a {
+  display: inline;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  font-size: 1.6vw;
+  line-height: 1.6vw; /* TODO: Fix the bug where line height is changed from zooming. */
+  z-index: 1;
+}
+
+.random-text {
+  z-index: 1;
+  margin: 1vw;
+}
+
+.random-article-image {
+  position: absolute;
+  float: left;
+  width: 25vw;
+  height: 25vw;
+  object-position: center;
+  object-fit: cover;
+  user-select: none;
+  z-index: 0;
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}

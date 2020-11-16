@@ -1,0 +1,41 @@
+/*
+::::    ::::      :::     ::::::::::: ::::    ::: 
++:+:+: :+:+:+   :+: :+:       :+:     :+:+:   :+: 
++:+ +:+:+ +:+  +:+   +:+      +:+     :+:+:+  +:+ 
++#+  +:+  +#+ +#++:++#++:     +#+     +#+ +:+ +#+ 
++#+       +#+ +#+     +#+     +#+     +#+  +#+#+# 
+#+#       #+# #+#     #+#     #+#     #+#   #+#+# 
+###       ### ###     ### ########### ###    #### 
+
+Every page uses this default css.
+*/
+
+/* Define the hyperlegible font as a custom font face. */
+@font-face {
+  font-family: hyperlegibleAtkinson;
+  src: url(fonts/Atkinson-Hyperlegible-Regular-102.ttf);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Kill all 3 types of margins. */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* Kill the horizontal scrollbar. */
+  max-width: 100%;
+  overflow-x: hidden;
+  /* Font stuff. */
+  font-family: hyperlegibleAtkinson, sans-serif;
+  /* Background stuff. */
+  background-color: #58A5D9;
+  background-image: url('images/bg.png');
+  background-size: 75%;
+  background-repeat: repeat;
+  /* Text color. */
+  color: white;
+}

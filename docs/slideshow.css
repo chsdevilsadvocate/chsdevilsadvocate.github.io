@@ -1,0 +1,107 @@
+/*
+ ::::::::  :::        ::::::::::: :::::::::  ::::::::::  ::::::::  :::    :::  ::::::::  :::       ::: 
+:+:    :+: :+:            :+:     :+:    :+: :+:        :+:    :+: :+:    :+: :+:    :+: :+:       :+: 
++:+        +:+            +:+     +:+    +:+ +:+        +:+        +:+    +:+ +:+    +:+ +:+       +:+ 
++#++:++#++ +#+            +#+     +#+    +:+ +#++:++#   +#++:++#++ +#++:++#++ +#+    +:+ +#+  +:+  +#+ 
+       +#+ +#+            +#+     +#+    +#+ +#+               +#+ +#+    +#+ +#+    +#+ +#+ +#+#+ +#+ 
+#+#    #+# #+#            #+#     #+#    #+# #+#        #+#    #+# #+#    #+# #+#    #+#  #+#+# #+#+#  
+ ########  ########## ########### #########  ##########  ########  ###    ###  ########    ###   ###    
+
+The 'home.html' page uses this in order for the slideshow to have styling.
+Some of this is based off of an example of a slideshow from w3schools, but at this point, very little example code actually remains.
+*/
+
+.slideshow {
+  margin: 4vw 2vw 2vw 4vw;
+  display: block;
+  float: left;
+  width: 58vw;
+  height: 29vw;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  background: black;
+}
+
+.slideshow > .slide img {
+  transform: scale(1.1);
+  /* When hover is off: */
+  filter: blur(0vw) brightness(100%);
+  -webkit-filter: blur(0vw) brightness(100%);
+  transition: 0.8s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.slideshow:hover > .slide img {
+  filter: blur(0.2vw) brightness(80%);
+  -webkit-filter: blur(0.2vw) brightness(80%);
+  transition: 0.8s ease;
+}
+
+.slide-caption {
+  padding: 1vw 0vw;
+  position: absolute;
+  bottom: 0vw;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.8s ease;
+  visibility: hidden; /* Everything starts hidden so you can't click on the wrong links accidentily while the page loads. */
+}
+
+.slide {
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+.slide a {
+  text-decoration: none; /* Removed blueness and underline of the link. */
+  color: white;
+  font-size: 2vw;
+}
+
+.slide img {
+  /* Makes the image stretch and crop and whatever. */
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.previous {
+  /* Positioning: */
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -2vw;
+  padding: 1vw;
+  /* Styling: */
+  color: white;
+  font-weight: bold;
+  font-size: 2vw;
+  transition: 0.6s ease;
+  border-radius: 0 0.5vw 0.5vw 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Position the next button to the right. */
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -2vw;
+  padding: 1vw;
+  color: white;
+  font-weight: bold;
+  font-size: 2vw;
+  transition: 0.6s ease;
+  right: 0;
+  border-radius: 0.5vw 0 0 0.5vw;
+  user-select: none;
+}
+
+.previous:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}

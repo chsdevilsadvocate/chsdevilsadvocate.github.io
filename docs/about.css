@@ -1,0 +1,63 @@
+/*
+    :::     :::::::::   ::::::::  :::    ::: ::::::::::: 
+  :+: :+:   :+:    :+: :+:    :+: :+:    :+:     :+:     
+ +:+   +:+  +:+    +:+ +:+    +:+ +:+    +:+     +:+     
++#++:++#++: +#++:++#+  +#+    +:+ +#+    +:+     +#+     
++#+     +#+ +#+    +#+ +#+    +#+ +#+    +#+     +#+     
+#+#     #+# #+#    #+# #+#    #+# #+#    #+#     #+#     
+###     ### #########   ########   ########      ###     
+
+The 'about.html' page uses this css.
+*/
+
+.description {
+  margin-left: 4vw;
+  margin-top: 4vw;
+  float: left;
+  width: 91vw;
+  background: #004785;
+}
+
+.description p {
+  margin: 2vw;
+  font-size: 1.8vw;
+  text-align: left;
+}
+
+.description code {
+  background: #00000066; /* 50% Transparency */
+}
+
+.person-section {
+  display: flex;
+  margin-left: 4vw;
+  margin-top: 4vw;
+  float: left;
+  width: 91vw;
+  height: 24vw;
+  background: #004785;
+}
+
+.person-section img {
+  display: inline-flex;
+  float: left;
+  height: 100%;
+  cursor: pointer;
+}
+
+.person-section p {
+  display: flex;
+  height: 85%;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  font-size: 1.8vw;
+  align-items: center;
+}
+
+p.even {
+  text-align: right;
+}
+
+p.final {
+  text-align: center;
+}

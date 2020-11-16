@@ -1,0 +1,31 @@
+/*
+::::::::::  ::::::::   ::::::::  ::::::::::: :::::::::: :::::::::  
+:+:        :+:    :+: :+:    :+:     :+:     :+:        :+:    :+: 
++:+        +:+    +:+ +:+    +:+     +:+     +:+        +:+    +:+ 
+:#::+::#   +#+    +:+ +#+    +:+     +#+     +#++:++#   +#++:++#:  
++#+        +#+    +#+ +#+    +#+     +#+     +#+        +#+    +#+ 
+#+#        #+#    #+# #+#    #+#     #+#     #+#        #+#    #+# 
+###         ########   ########      ###     ########## ###    ### 
+
+Every page uses this css for the footer.
+*/
+
+.copyright-footer {
+  display: flex;
+  width: 100%;
+  height: 4vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background: #333333;
+}
+
+.copyright-footer p {
+  font-size: 1vw;
+  color: white;
+  text-align: center;
+  margin: 0;
+}

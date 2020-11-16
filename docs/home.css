@@ -1,0 +1,142 @@
+/*
+:::    :::  ::::::::  ::::    ::::  :::::::::: 
+:+:    :+: :+:    :+: +:+:+: :+:+:+ :+:        
++:+    +:+ +:+    +:+ +:+ +:+:+ +:+ +:+        
++#++:++#++ +#+    +:+ +#+  +:+  +#+ +#++:++#   
++#+    +#+ +#+    +#+ +#+       +#+ +#+        
+#+#    #+# #+#    #+# #+#       #+# #+#        
+###    ###  ########  ###       ### ########## 
+
+The 'home.html' page uses this css.
+*/
+
+/**********************/
+/*        News        */
+/**********************/
+
+.news {
+  margin: 4vw 4vw 2vw 2vw;
+  display: block;
+  float: left;
+  width: 29vw;
+  height: inherit;
+  background: #004785;
+  overflow-y: auto;
+}
+
+.news h1 {
+  text-align: center;
+  margin-top: 1vw;
+  margin-bottom: 0.2vw;
+  font-size: 3vw;
+}
+
+.news ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 3vw;
+}
+
+.news li {
+  padding-left: 0.5vw;
+  padding-right: 3.5vw;
+  padding-bottom: 1vw;
+  margin: 0;
+  text-align: left;
+  font-size: 1.4vw;
+}
+
+/**********************/
+/*        Join        */
+/**********************/
+
+.join {
+  margin: 2vw 4vw 2vw 4vw;
+  display: block;
+  float: left;
+  width: 91vw;
+  height: 4vw;
+  background: #004785;
+}
+
+.join p {
+  margin: 1.1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.4vw;
+}
+
+/**********************/
+/*   Random Article   */
+/**********************/
+
+.random-article {
+  margin: 2vw;
+  display: flex;
+  float: left;
+  width: 19.75vw;
+  height: inherit;
+  background: #004785;
+  text-align: justify;
+  overflow: hidden;
+  margin-bottom: 8vw;
+}
+
+.random-div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: top;
+  padding: 5%;
+  float: left;
+  height: 17.3vw; /* This should be a magic number to prevent lines from overflowing, but it doesn't work!  TODO: Fix the bug below where line height is changed from zooming. */
+  width: 17.75vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.random-article i {
+  display: inline-block;
+  font-size: 2.5vw;
+  padding: 0 0.4vw 0 0;
+  z-index: 1;
+}
+
+.random-article h1 {
+  padding: 0;
+  margin: 0.4vw;
+  text-align: center;
+  overflow: hidden;
+  font-size: 2vw;
+  z-index: 1;
+}
+
+.random-article a {
+  display: inline;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  font-size: 1.2vw;
+  line-height: 1.2vw; /* TODO: Fix the bug where line height is changed from zooming. */
+  z-index: 1;
+}
+
+.random-text {
+  z-index: 1;
+}
+
+.random-article-image {
+  margin: -1vw;
+  position: absolute;
+  float: left;
+  width: 19.75vw;
+  height: 19.75vw;
+  object-position: center;
+  object-fit: cover;
+  user-select: none;
+  z-index: 0;
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}

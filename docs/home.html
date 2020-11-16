@@ -1,0 +1,173 @@
+<!-- Do not include doctype here, because it breaks line height. -->
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> <!-- Include fontawesome icons. -->
+      <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Add Favicon -->
+      <meta name="viewport" content="width=device-width" user-scalable="no">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <script src="data.js"></script>
+      <script src="slideshow.js"></script>
+      <script src="randomArticle.js"></script>
+      <script src="latestArticle.js"></script>
+      <script src="homeMenubar.js"></script>
+      <script src="search.js"></script>
+      <link rel="stylesheet" href="main.css">
+      <link rel="stylesheet" href="home.css">
+      <link rel="stylesheet" href="menubar.css">
+      <link rel="stylesheet" href="slideshow.css">
+      <link rel="stylesheet" href="footer.css">
+      <link rel="stylesheet" href="scrollbar.css">
+      <link rel="stylesheet" href="ie.css">
+  </head>
+  <body onload="articleData(); show(0); randomArticle(); latestArticle(); homeMenubar();">
+
+    <!------------------------------------------------------>
+    <!--                     Menu Bar                     -->
+    <!------------------------------------------------------>
+
+    <div class="menu-bg"></div> <!-- God, I hate Edge.  This makes the top bar flow to the 12px scrollbar instead of 17px. -->
+    <div style="margin: -4vw;"></div>
+    <div class="menubar">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="archive.html?genre=events">Events</a>
+      <a href="archive.html?genre=interviews">Interviews</a>
+      <a href="archive.html?genre=reviews">Reviews</a>
+      <a href="archive.html?genre=sports">Sports</a>
+      <a href="archive.html?genre=arts">Arts</a>
+      <a href="archive.html?genre=opinion">Opinion</a>
+      <a href="archive.html?genre=other">Other</a>
+      <a href="archive.html?genre=all">Archive</a>
+      <a onclick="openSearch();" id="search">
+        <i class="fas fa-search"></i>
+      </a>
+      <input class="searchbar" type="text" placeholder="Search..." onkeydown="search(this)"></input>
+    </div>
+
+    <!------------------------------------------------------>
+    <!--            Slideshow and News Section            -->
+    <!------------------------------------------------------>
+
+    <div class="slideshow-news-section" style="width: 100vw; height: 29vw;">
+      
+      <!------------------------>
+      <!--      Slideshow     -->
+      <!------------------------>
+
+      <div class="slideshow" onmouseenter="captionOn(); hoverOn();" onmouseleave="captionOff(); hoverOff();">
+        
+        <div class="slide" id="home-slide">
+          <img src="images/home.png">
+          <div class="slide-caption">
+            <a href="home.html">The Newspaper of Columbia High School</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img>
+          <div class="slide-caption">
+            <a></a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img>
+          <div class="slide-caption">
+            <a></a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img>
+          <div class="slide-caption">
+            <a></a>
+          </div>
+        </div>
+
+        <a class="previous" onclick="next(-1)">  <i class="fas fa-angle-left"></i>  </a>
+        <a class="next" onclick="next(1)">  <i class="fas fa-angle-right"></i>  </a>
+
+      </div>
+
+      <!------------------------>
+      <!--        News        -->
+      <!------------------------>
+
+      <div class="news">
+        <h1>News</h1>
+        <ul>
+          <li>Devil's Advocate has gone digital: the website has been released!</li>
+          <li>Start writing some articles!  Take a look at Google Classroom for more information.</li>
+          <li>Remember to hand in your pictures and bios so you can be added to the About section.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!------------------------------------------------------>
+    <!--                   Join Section                   -->
+    <!------------------------------------------------------>
+
+    <div class="join-section" style="width: 100%; height: 4vw;">
+      <div class="join">
+        <p>
+          We always need more writers and editors!  Join Devil's Advocate with the Google Classroom code uhea4cu.
+        </p>
+      </div>
+    </div>
+
+    <!------------------------------------------------------>
+    <!--                 Random Articles                  -->
+    <!------------------------------------------------------>
+
+    <div class="random-articles" style="width: 100vw; height: 19.75vw;">
+
+      <div class="random-article" style="margin-left: 4vw;">
+        <div class="random-div">
+          <h1>Random Article</h1>
+          <i class="fas fa-quote-left"></i>
+          <a></a>
+        </div>
+      </div>
+
+      <div class="random-article">
+        <div class="random-div">
+          <h1>Random Article</h1>
+          <i class="fas fa-quote-left"></i>
+          <a></a>
+        </div>
+      </div>
+
+      <div class="random-article">
+        <div class="random-div">
+          <h1>Random Article</h1>
+          <i class="fas fa-quote-left"></i>
+          <a></a>
+        </div>
+      </div>
+
+      <div class="random-article" style="margin-right: 4vw;">
+        <div class="random-div">
+          <h1>Random Article</h1>
+          <i class="fas fa-quote-left"></i>
+          <a></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!------------------------------------------------------>
+    <!--            Integrations (Coming Soon)            -->
+    <!------------------------------------------------------>
+
+    <!-- Nothing here for the moment. -->
+
+    <!------------------------------------------------------>
+    <!--                  Closing Stuff                   -->
+    <!------------------------------------------------------>
+
+    <div class="copyright-footer">
+      <p>Copyright © 2020 Benson Haley</p>
+    </div>
+
+  </body>
+</html>

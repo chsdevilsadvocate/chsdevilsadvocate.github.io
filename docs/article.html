@@ -1,0 +1,86 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> <!-- Include fontawesome icons. -->
+      <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Add Favicon -->
+      <meta name="viewport" content="width=device-width" user-scalable="no">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <script src="data.js"></script>
+      <script src="displayArticle.js"></script>
+      <script src="sidebar.js"></script>
+      <script src="search.js"></script>
+      <link rel="stylesheet" href="main.css">
+      <link rel="stylesheet" href="menubar.css">
+      <link rel="stylesheet" href="article.css">
+      <link rel="stylesheet" href="footer.css">
+      <link rel="stylesheet" href="scrollbar.css">
+      <link rel="stylesheet" href="ie.css">
+  </head>
+  <body onload="articleData(); displayArticle(); sidebarHeight(); sidebar();" onresize="sidebarHeight(); sidebar();">
+
+    <!------------------------------------------------------>
+    <!--                     Menu Bar                     -->
+    <!------------------------------------------------------>
+
+    <div class="menu-bg"></div>
+    <div style="margin: -4vw;"></div>
+    <div class="menubar">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="archive.html?genre=events">Events</a>
+      <a href="archive.html?genre=interviews">Interviews</a>
+      <a href="archive.html?genre=reviews">Reviews</a>
+      <a href="archive.html?genre=sports">Sports</a>
+      <a href="archive.html?genre=arts">Arts</a>
+      <a href="archive.html?genre=opinion">Opinion</a>
+      <a href="archive.html?genre=other">Other</a>
+      <a href="archive.html?genre=all">Archive</a>
+      <a onclick="openSearch();" id="search">
+        <i class="fas fa-search"></i>
+      </a>
+      <input class="searchbar" type="text" placeholder="Search..." onkeydown="search(this)"></input>
+    </div>
+
+    <!------------------------------------------------------>
+    <!--                     Article                      -->
+    <!------------------------------------------------------>
+
+    <!-- This will make widths correct. -->
+    <div class="special-width-container" style="width: 100vw;">
+
+      <div class="article">
+
+        <div class="header">
+          <img>
+          <div class="title"><h1></h1></div>
+          <div class="author-date">
+            <div class="author"><h2></h2></div>
+            <div class="date"><h2></h2></div>
+          </div>
+        </div>
+
+        <div class="text">
+          <pre><p></p></pre>
+        </div>
+
+      </div>
+
+      <!------------------------------------------------------>
+      <!--                     Sidebar                      -->
+      <!------------------------------------------------------>
+
+      <div class="sidebar">
+
+      </div>
+    </div>
+
+    <!------------------------------------------------------>
+    <!--                  Closing Stuff                   -->
+    <!------------------------------------------------------>
+
+    <div class="copyright-footer">
+      <div id="space"></div>
+      <div><p>Copyright © 2020 Benson Haley</p></div>
+    </div>
+
+  </body>
+</html>

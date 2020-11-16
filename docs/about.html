@@ -1,0 +1,147 @@
+<!-- Do not include doctype here, because it breaks line height. -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> <!-- Include fontawesome icons. -->
+    <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Add Favicon -->
+    <meta name="viewport" content="width=device-width" user-scalable="no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="data.js"></script>
+    <script src="aboutMenubar.js"></script>
+    <script src="search.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="scrollbar.css">
+    <link rel="stylesheet" href="ie.css">
+  </head>
+  <body onload="articleData(); aboutMenubar();">
+
+    <!------------------------------------------------------>
+    <!--                     Menu Bar                     -->
+    <!------------------------------------------------------>
+
+    <div class="menu-bg"></div> <!-- God, I hate Edge.  This makes the top bar flow to the 12px scrollbar instead of 17px. -->
+    <div style="margin: -4vw;"></div>
+    <div class="menubar">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="archive.html?genre=events">Events</a>
+      <a href="archive.html?genre=interviews">Interviews</a>
+      <a href="archive.html?genre=reviews">Reviews</a>
+      <a href="archive.html?genre=sports">Sports</a>
+      <a href="archive.html?genre=arts">Arts</a>
+      <a href="archive.html?genre=opinion">Opinion</a>
+      <a href="archive.html?genre=other">Other</a>
+      <a href="archive.html?genre=all">Archive</a>
+      <a onclick="openSearch();" id="search">
+        <i class="fas fa-search"></i>
+      </a>
+      <input class="searchbar" type="text" placeholder="Search..." onkeydown="search(this)"></input>
+    </div>
+
+    <!------------------------------------------------------>
+    <!--                       Body                       -->
+    <!------------------------------------------------------>
+
+    <!-- This will make widths correct. -->
+    <div class="special-width-container" style="width: 100vw;">
+      <div class="description"><p>
+        Welcome to the digital Devil's Advocate!  The Devil's Advocate is a scholastic organization that creates a newspaper that is written, edited, and published by the students of Columbia High School.  This website houses an archive of articles that have or will be published in the Devil's Advocate newspaper.  Articles can be found in their respective categories in the menubar at the top of the page, or by searching for them using the icon in the top-right corner.  This website is unfinished and constantly being improved; if you find any bugs or have suggestions for features, please email Benson Haley at <code>21haleybe1@egcsd.org</code>.
+        <br><br>
+        To participate in creating the newspaper, join the Devil's Advocate Google Classroom with the code uhea4cu.  For further information, contact the club's coordinators: Mrs. Asenbauer (<code>asenbauerme@egcsd.org</code>) and Mrs. Macpherson (<code>macphersonka@egcsd.org</code>).
+        <br><br>
+        Scroll down to find a list of the students and teachers that are or were writers, editors, publishers, and/or coordinators of the Devil's Advocate!  You can click on their picture to automatically search for their articles.</p></div>
+
+      <div class="person-section">
+        <img src="images/people/ekansh_agrawal.jpg" onclick="doSearch('Ekansh Agrawal');">
+        <p>My name is Ekansh Agrawal, and I am a Senior at Columbia.  I’ve been a part of Devil’s Advocate since I was a freshman and I’ve written articles about movie reviews, school policies, and clubs, but I like to write about new scientific findings the most. A fun fact about myself is that I have won a Haythrowing contest.</p>
+      </div>
+
+      <div class="person-section">
+        <p class="even">Hi! My name is Katie Asenbauer (she/her) and I’m one of the editors of the newspaper.  Along with contributing to the Devil’s Advocate, I am Columbia’s Student Council Executive President and I play field hockey in the fall!  I plan to study Art Education at SUNY New Paltz or UVM.  If you ever see a pink car strolling through East Greenbush... it’s probably me on my way to go get french fries ;)</p>
+        <img class="even" src="images/people/katie_asenbauer.jpg" onclick="doSearch('Katie Asenbauer');">
+      </div>
+
+      <div class="person-section">
+        <img src="images/people/morgen_doyle.jpg" onclick="doSearch('Morgen Doyle');">
+        <p>My name is Morgen Doyle (he/him/his) and I am a senior at Columbia. I have been a Devil’s Advocate contributor since my freshman year. I love writing about television and film. A fun fact about myself is that I bet I could eat every Oreo on a store shelf if given the chance (except the Mint, they are bad).</p>
+      </div>
+
+      <div class="person-section">
+        <p class="even">My name is Klaire Farley and I am a junior at Columbia. I have been involved with the Devil's Advocate since my freshman year. I write about all sorts of random things including but not limited to  book reviews and lists about annoying christmas songs. A fun fact about myself is that I love horses and I work at a racehorse retirement facility.</p>
+        <img class="even" src="images/people/klaire_farley.jpg" onclick="doSearch('Klaire Farley');">
+      </div>
+
+      <div class="person-section">
+        <img src="images/people/molly_graiff.png" onclick="doSearch('Molly Graiff');">
+        <p>My name is Molly Graiff and I’m a freshman at Columbia. I have a strong passion for writing. I’m the student editor for Skribblers Magazine. I recently was a national winner of the Collaborative Summer Library Program 2020 Teen Video Challenge and runner-up of the New York Times 2020 Vocabulary Video Contest. When I’m not writing you can find me reading, walking, and riding my bike. I also enjoy theatre and performing arts.</p>
+      </div>
+
+      <div class="person-section">
+        <p class="even">I'm Benson Haley, a senior at Columbia High School.  Along with writing and editing articles for the newspaper, I've developed this website.  When I'm not updating the website, I could be performing in a musical, practicing Tae Kwon Do, or dealing with my various computer programming projects.</p>
+        <img class="even" src="images/people/benson_haley.jpg" onclick="doSearch('Benson Haley');">
+      </div>
+
+      <div class="person-section">
+        <img src="images/people/maddie_ingoldsby.jpg" onclick="doSearch('Maddie Ingoldsby');">
+        <p>My name is Maddie Ingoldsby and I am a senior at Columbia. This is my fourth year being involved in Devils Advocate. My passion is writing about professional sports. A fun fact about myself is that I have played 6 sports throughout my life and my favorite one is softball.</p>
+      </div>
+
+      <div class="person-section">
+        <p class="even">My name is Cara Lallier and I am a junior at Columbia High School. This is my first year being involved in Devil’s Advocate. One of my favorite things to do is create, I love to paint, draw, and design. A fun fact about myself is that I play volleyball and softball in my free time.</p>
+        <img class="even" src="images/people/cara_lallier.jpg" onclick="doSearch('Cara Lallier');">
+      </div>
+
+      <div class="person-section">
+        <img src="images/people/mitty_madan.jpg" onclick="doSearch('Mitty Madan');">
+        <p>My name is Mitty Madan and I’m a senior at Columbia. This is my third year participating in Devils’ Advocate. I love writing about pop culture and social media! A fun fact about myself is that I have been dancing for 12 years!</p>
+      </div>
+
+      <div class="person-section">
+        <p class="even">My name is Sophie Meyer (she/her), I am a senior at Columbia. This is my third year as a writer for the Devil’s Advocate. My main interest is pop culture, like celebrities and the entertainment industry. I also love to write about political subjects and I try to follow politics closely. In college, I plan to pursue a political science major.</p>
+        <img class="even" src="images/people/sophie_meyer.jpg" onclick="doSearch('Sophie Meyer');">
+      </div>
+
+      <div class="person-section">
+        <img src="images/people/praaghya_meyyan.jpg" onclick="doSearch('Praaghya Meyyan');">
+        <p>Hi there! My name is Praaghya Meyyan and I am a senior at Columbia. I joined Devil’s Advocate because it gives me the opportunity to write about anything I want to write about! Some of my hobbies include binge watching netflix and trying different styles of dance. A fun fact about me: I have an unhealthy addiction to Reese’s Peanut Butter Cups :)</p>
+      </div>
+
+      <div class="person-section">
+        <p class="even">My name is Violet, I plan on studying fashion design after graduation and I’ve been a part of the Devil’s Advocate since I moved to East Greenbush in tenth grade. I’ve written articles about white privilege and astrology but this year I’m going to focus on the fashion industry. My hobbies include designing, sewing, photography, procrastinating, and scrolling through Tik Tok.</p>
+        <img class="even" src="images/people/violet_nichols.jpg" onclick="doSearch('Violet Nichols');">
+      </div>
+
+      <div class="person-section">
+        <img src="images/people/emma_o_kane.png" onclick="doSearch('Emma O’Kane');">
+        <p>My name is Emma O’Kane (she/her/hers) and I am a Freshman at Columbia. I am so excited to participate in Devil’s Advocate this year! I love reading/writing, music and animals. A fun fact about myself is that I have an unhealthy “Dance Moms” obsession.</p>
+      </div>
+
+      <div class="person-section">
+        <p class="even">My name is Mylah Rosbozom.  I am a Sophomore this year, and this is my second year contributing to the newspaper. I like writing about lots of things and submitting recipes. A fun fact about me is that I love baking and watching baking shows.</p>
+        <img class="even" src="images/people/mylah_rosbozom.jpg" onclick="doSearch('Mylah Rosbozom');">
+      </div>
+
+      <div class="person-section">
+        <img src="images/people/alexis_szemplinski.png" onclick="doSearch('Alexis Szemplinski');">
+        <p>My name is Alexis Szemplinski, and I am a freshman here at Columbia. This is my first year being a member of the Devil’s Advocate club. What you should know about me is that I love helping people and I also love writing.  I am enthusiastic about writing to inform students on various topics; particularly all things fashion. A fun fact about me is that I have a small business baking delicious treats!</p>
+      </div>
+
+      <div class="person-section" style="margin-bottom: 8vw;">
+        <p class="even">My name is Drea VanVranken and I’m a freshman at Columbia. I am so excited to be a part of Devil’s Advocate this year because of my love for writing! I love falling on ice videos because they are legendary. I bet I could play any character on Friends (no script needed), and I’m basically a Netflix sponsor at this point...</p>
+        <img class="even" src="images/people/drea_vanvranken.jpg" onclick="doSearch('Drea VanVranken');">
+      </div>
+    </div>
+
+    <!------------------------------------------------------>
+    <!--                  Closing Stuff                   -->
+    <!------------------------------------------------------>
+
+    <div class="copyright-footer">
+      <div id="space"></div>
+      <div><p>Copyright © 2020 Benson Haley</p></div>
+    </div>
+
+  </body>
+</html>

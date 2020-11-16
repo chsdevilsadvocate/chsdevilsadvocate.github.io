@@ -1,0 +1,39 @@
+/*
+ ::::::::   ::::::::  :::::::::   ::::::::  :::        :::        :::::::::      :::     :::::::::  
+:+:    :+: :+:    :+: :+:    :+: :+:    :+: :+:        :+:        :+:    :+:   :+: :+:   :+:    :+: 
++:+        +:+        +:+    +:+ +:+    +:+ +:+        +:+        +:+    +:+  +:+   +:+  +:+    +:+ 
++#++:++#++ +#+        +#++:++#:  +#+    +:+ +#+        +#+        +#++:++#+  +#++:++#++: +#++:++#:  
+       +#+ +#+        +#+    +#+ +#+    +#+ +#+        +#+        +#+    +#+ +#+     +#+ +#+    +#+ 
+#+#    #+# #+#    #+# #+#    #+# #+#    #+# #+#        #+#        #+#    #+# #+#     #+# #+#    #+# 
+ ########   ########  ###    ###  ########  ########## ########## #########  ###     ### ###    ###  
+
+Every page uses this css for a custom scrollbar.  It only actually works on chrome and firefox (with slightly different looks on each).
+*/
+
+/* CHROME */
+
+body::-webkit-scrollbar {
+  width: 1.1068vw;
+}
+ 
+body::-webkit-scrollbar-track {
+  background-color: #333333;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #666666;
+}
+
+body::-webkit-scrollbar-thumb:horizontal:hover, body::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: #555555;
+}
+
+body::-webkit-scrollbar-thumb:horizontal:active, body::-webkit-scrollbar-thumb:vertical:active { 
+  background-color: #444444;
+}
+
+/* FIREFOX */
+
+:root {
+  scrollbar-color: #444444 #222222;
+}

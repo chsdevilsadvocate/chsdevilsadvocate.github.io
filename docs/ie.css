@@ -1,0 +1,31 @@
+/*
+::::::::::: :::::::::: 
+    :+:     :+:        
+    +:+     +:+        
+    +#+     +#++:++#   
+    +#+     +#+        
+    #+#     #+#        
+########### ########## 
+
+This tests whether the page uses internet explorer.
+*/
+
+/* This hacky method checks for ms high-contrast mode being on or off, which is specific to internet explorer. */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   /* Hide the children of body. */
+   body > * {
+    display: none;
+    visibility: hidden;
+   }
+
+   /* Add a message that people can't use internet explorer. */
+   body {
+    font-size: 2vw;
+    color: black;
+    text-align: left;
+    padding: 2vw;
+   }
+   body::before {
+    content: "Internet Explorer is not compatible with this website.  Due to the browser not following CSS and Javascript standards most of the website cannot be displayed correctly, if at all.  Please use a different browser to access this content.  We are very sorry for the inconvenience.";
+   }
+}
