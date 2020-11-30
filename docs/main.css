@@ -13,6 +13,7 @@ Every page uses this default css.
 /* Define the hyperlegible font as a custom font face. */
 @font-face {
   font-family: hyperlegibleAtkinson;
+  font-display: swap;
   src: url(fonts/Atkinson-Hyperlegible-Regular-102.ttf);
 }
 
