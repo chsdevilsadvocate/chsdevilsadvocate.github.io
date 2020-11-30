@@ -52,7 +52,9 @@ The 'home.html' page uses this css.
 
 .join {
   margin: 2vw 4vw 2vw 4vw;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   float: left;
   width: 91vw;
   height: 4vw;
@@ -60,10 +62,6 @@ The 'home.html' page uses this css.
 }
 
 .join p {
-  margin: 1.1%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   font-size: 1.4vw;
 }

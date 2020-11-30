@@ -31,8 +31,13 @@ Every page uses this css for the menubar.
 }
 
 .menubar a {
-  height: 4vw;
-  padding: 1.4vw 1vw; /* Top/bottom and right/left. */
+  padding-left: 1vw;
+  padding-right: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   float: left; /* Align the boxes on the menu bar to the left side of the screen. Padding doesn't work if this doesn't exist for some reason.*/
   text-align: center;
   text-decoration: none; /* This gets rid of the underline for the links. */
@@ -43,7 +48,7 @@ Every page uses this css for the menubar.
 /* Only for the search bar, which is better than the other things. */
 .menubar a[id="search"] {
   float: right;
-  padding: 1.5vw 0vw;
+  padding: 0vw 0vw;
   width: 4vw;
   transition: transform 1s;
 }
