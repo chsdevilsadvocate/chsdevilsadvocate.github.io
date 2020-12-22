@@ -22,7 +22,7 @@ function randomArticle() {
     let innerHTMLToSet = '<div class="random-div"><h1>Random Article</h1><div class="random-text"><i class="fas fa-quote-left"></i><a href=article.html?article-id=' + randomKey + '>' + randomArticle.callout + '</a></div>'; // Set some HTML to a variable.
     //Add the image HTML to that variable.
      if (randomArticle.image != undefined) {
-          innerHTMLToSet += '<img class="random-article-image" src=images/' + randomArticle .image+ '>'; // Set the image as the background.
+          innerHTMLToSet += '<img class="random-article-image" src=images/articles/' + randomArticle .image+ '>'; // Set the image as the background.
         } else {
           innerHTMLToSet += '<img class="random-article-image" src=images/genres/' + 'genre' + '.png>'; // Set the default genre image as the background.
         }

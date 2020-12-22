@@ -23,7 +23,7 @@ function displayArticle() {
   let headerDiv = (document.getElementsByClassName("header"))[0]; // Get the div to put the title in.
   // Put the title in the title div.  If there's an image, ad that, otherwise, put the genre-specific image in.
   if (article.image != undefined) {
-    headerDiv.innerHTML = '<img src=images/' + article.image + '>' + '<div class="title"><h1>' + article.name + '</h1></div><div class="author-date"><div class="author"><h2>' + article.author + '</h2></div><div class="date"><h2>' + article.date + '</h2></div></div>';
+    headerDiv.innerHTML = '<img src=images/articles/' + article.image + '>' + '<div class="title"><h1>' + article.name + '</h1></div><div class="author-date"><div class="author"><h2>' + article.author + '</h2></div><div class="date"><h2>' + article.date + '</h2></div></div>';
   } else {
     headerDiv.innerHTML = '<img src=images/genres/' + 'genre' + '.png>' + '<div class="title"><h1>' + article.name + '</h1></div><div class="author-date"><div class="author"><h2>' + article.author + '</h2></div><div class="date"><h2>' + article.date + '</h2></div></div>';
   }

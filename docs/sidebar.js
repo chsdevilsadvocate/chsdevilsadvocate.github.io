@@ -46,7 +46,7 @@ function sidebar() {
     let randomKey = keys[ Math.floor(Math.random() * keys.length) ]; // Select a random id from the array of key names.
     let randomArticle = articles[randomKey];
     let randomImage;
-    if (randomArticle.image != undefined) { randomImage = randomArticle.image; }
+    if (randomArticle.image != undefined) { randomImage = "articles/" + randomArticle.image; }
     else { randomImage = 'genres/genre.png' }
 
     sidebarDiv.innerHTML += `<div class="random-article">

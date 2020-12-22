@@ -34,7 +34,7 @@ function loadArchive() {
     for (let key of keys) {
       innerHTMLToSet += ('<div class="article" onclick="location.href=' + "'article.html?article-id=" + key + "'" + '"><h1><a href="article.html?article-id=' + key + '">' + articles[key].name + '</a></h1><a href="article.html?article-id=' + key + '">' + articles[key].author + '</a>');
       if (articles[key].image != undefined) {
-        innerHTMLToSet += '<img src=images/' + articles[key].image + '>'; // Set the image as the background.
+        innerHTMLToSet += '<img src=images/articles/' + articles[key].image + '>'; // Set the image as the background.
       } else {
         innerHTMLToSet += '<img src=images/genres/' + 'genre' + '.png>'; // Set the default genre image as the background.
       }
@@ -48,7 +48,7 @@ function loadArchive() {
         innerHTMLToSet += ('<div class="article" onclick="location.href=' + "'article.html?article-id=" + key + "'" + '"><h1><a href="article.html?article-id=' + key + '">' + articles[key].name + '</a></h1><a href="article.html?article-id=' + key + '">' + articles[key].author + '</a>');
         // Do checks for an image and see whether it should have the image as a background or the genre.
         if (articles[key].image != undefined) {
-          innerHTMLToSet += '<img src=images/' + articles[key].image + '>'; // Set the image as the background.
+          innerHTMLToSet += '<img src=images/articles/' + articles[key].image + '>'; // Set the image as the background.
         } else {
           innerHTMLToSet += '<img src=images/genres/' + 'genre' + '.png>'; // Set the default genre image as the background.
         }

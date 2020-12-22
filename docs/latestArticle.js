@@ -21,7 +21,7 @@ function latestArticle() {
   for (slide of slides) {
     if (slide.id != 'home-slide') {
       if (articles[keys[i]].image != undefined) {
-        slide.innerHTML = '<img src=images/' + articles[keys[i]].image + '>' + '<div class="slide-caption"><a href=article.html?article-id=' + keys[i] + '>' + articles[keys[i]].name + '</a></div>';
+        slide.innerHTML = '<img src=images/articles/' + articles[keys[i]].image + '>' + '<div class="slide-caption"><a href=article.html?article-id=' + keys[i] + '>' + articles[keys[i]].name + '</a></div>';
       } else {
         slide.innerHTML = '<img src=images/genres/' + 'genre' + '.png>' + '<div class="slide-caption"><a href=article.html?article-id=' + keys[i] + '>' + articles[keys[i]].name + '</a></div>';
       }
