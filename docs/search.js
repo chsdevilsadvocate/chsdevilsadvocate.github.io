@@ -122,7 +122,7 @@ function loadSearch() {
       innerHTMLToSet = '';
       innerHTMLToSet += ('<div class="article"><h1><a href="article.html?article-id=' + searchResults[article[0]] + '">' + articles[searchResults[article[0]]].name + '</a></h1><a href="article.html?article-id=' + searchResults[article[0]] + '">' + articles[searchResults[article[0]]].author + '</a>');
       if (articles[searchResults[article[0]]].image != undefined) {
-        innerHTMLToSet += '<img src=images/' + articles[searchResults[article[0]]].image + '>'; // Set the image as the background.
+        innerHTMLToSet += '<img src=images/articles/' + articles[searchResults[article[0]]].image + '>'; // Set the image as the background.
       } else {
         innerHTMLToSet += '<img src=images/genres/' + 'genre' + '.png>'; // Set the default genre image as the background.
       }
