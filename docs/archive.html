@@ -4,6 +4,7 @@
       <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Add Favicon -->
       <meta name="viewport" content="width=device-width" user-scalable="no">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <script src="theme.js"></script>
       <script src="data.js"></script>
       <script src="archive.js"></script>
       <script src="search.js"></script>
@@ -14,7 +15,7 @@
       <link rel="stylesheet" href="scrollbar.css">
       <link rel="stylesheet" href="ie.css">
   </head>
-  <body onload="articleData(); loadArchive();">
+  <body onload="theme(); articleData(); loadArchive();">
 
     <!------------------------------------------------------>
     <!--                     Menu Bar                     -->
@@ -33,9 +34,13 @@
       <a href="archive.html?genre=opinion"><p>Opinion</p></a>
       <a href="archive.html?genre=other"><p>Other</p></a>
       <a href="archive.html?genre=all"><p>Archive</p></a>
-      <a onclick="openSearch();" id="search">
+      <a onclick="openSearch();" class="right" id="search">
         <i class="fas fa-search"></i>
       </a>
+      <a href="settings.html" class="right" id="settings">
+        <i class="fas fa-cog"></i>
+      </a>
+      
       <input class="searchbar" type="text" placeholder="Search..." onkeydown="search(this)"></input>
     </div>
 
@@ -59,7 +64,7 @@
 
     <div class="copyright-footer">
       <div id="space"></div>
-      <div><p>Copyright © 2020 Benson Haley</p></div>
+      <div><p>Copyright © 2021 Benson Haley and Columbia High School's <i>Devil's Advocate</i></p></div>
     </div>
 
   </body>

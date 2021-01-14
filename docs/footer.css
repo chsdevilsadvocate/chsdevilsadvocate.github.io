@@ -1,12 +1,4 @@
 /*
-::::::::::  ::::::::   ::::::::  ::::::::::: :::::::::: :::::::::  
-:+:        :+:    :+: :+:    :+:     :+:     :+:        :+:    :+: 
-+:+        +:+    +:+ +:+    +:+     +:+     +:+        +:+    +:+ 
-:#::+::#   +#+    +:+ +#+    +:+     +#+     +#++:++#   +#++:++#:  
-+#+        +#+    +#+ +#+    +#+     +#+     +#+        +#+    +#+ 
-#+#        #+#    #+# #+#    #+#     #+#     #+#        #+#    #+# 
-###         ########   ########      ###     ########## ###    ### 
-
 Every page uses this css for the footer.
 */
 
@@ -20,12 +12,14 @@ Every page uses this css for the footer.
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  background: #333333;
+  background: var(--menubar-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
 }
 
 .copyright-footer p {
   font-size: 1vw;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   margin: 0;
 }

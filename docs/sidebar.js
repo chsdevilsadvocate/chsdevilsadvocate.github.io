@@ -1,21 +1,14 @@
 /*
-███████╗██╗██████╗ ███████╗██████╗  █████╗ ██████╗ 
-██╔════╝██║██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗
-███████╗██║██║  ██║█████╗  ██████╔╝███████║██████╔╝
-╚════██║██║██║  ██║██╔══╝  ██╔══██╗██╔══██║██╔══██╗
-███████║██║██████╔╝███████╗██████╔╝██║  ██║██║  ██║
-╚══════╝╚═╝╚═════╝ ╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-
-Do sidebar stuff.
+Do individual article sidebar stuff.
 */
 
 // Make the sidebar the same height as the article's height.
 function sidebarHeight() {
-  let textDiv = (document.getElementsByClassName("text"))[0];
+  let textDiv = (document.getElementsByClassName('text'))[0];
   let sidebarDiv = (document.getElementsByClassName('sidebar'))[0];
   //  This is the article's height divided by the total screen width, to get a vw value.  It is multiplied by 100 because vws are measured out of 100, not out of 1.
   let sidebarHeight = (textDiv.getBoundingClientRect().height / window.innerWidth)*100;
-  sidebarHeight += 24; // Add the image height.
+  sidebarHeight += 28; // Add the image height (24vw).  Also, text is bounded by 2vw margins, so add 4vw to the sum.
   sidebarDiv.style.height = sidebarHeight + 'vw';
 }
 
@@ -26,7 +19,7 @@ function sidebar() {
   let sidebarDiv = (document.getElementsByClassName('sidebar'))[0];
   //  This is the article's height divided by the total screen width, to get a vw value.  It is multiplied by 100 because vws are measured out of 100, not out of 1.
   let sidebarHeight = (textDiv.getBoundingClientRect().height / window.innerWidth)*100;
-  sidebarHeight += 24; // Add the image height.
+  sidebarHeight += 28; // Add the image height (24vw).  Also, text is bounded by 2vw margins, so add 4vw to the sum.
 
   let numberOfObjects = Math.floor(sidebarHeight / 25); // The sidebar height divided by the height of each object is the number of objects.
 

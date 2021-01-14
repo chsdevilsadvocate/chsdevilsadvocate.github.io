@@ -1,12 +1,4 @@
 /*
-    :::     :::::::::   ::::::::  :::    ::: ::::::::::: 
-  :+: :+:   :+:    :+: :+:    :+: :+:    :+:     :+:     
- +:+   +:+  +:+    +:+ +:+    +:+ +:+    +:+     +:+     
-+#++:++#++: +#++:++#+  +#+    +:+ +#+    +:+     +#+     
-+#+     +#+ +#+    +#+ +#+    +#+ +#+    +#+     +#+     
-#+#     #+# #+#    #+# #+#    #+# #+#    #+#     #+#     
-###     ### #########   ########   ########      ###     
-
 The 'about.html' page uses this css.
 */
 
@@ -15,17 +7,15 @@ The 'about.html' page uses this css.
   margin-top: 4vw;
   float: left;
   width: 91vw;
-  background: #004785;
+  background: var(--fg-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
 }
 
 .description p {
   margin: 2vw;
   font-size: 1.8vw;
   text-align: left;
-}
-
-.description code {
-  background: #00000066; /* 50% Transparency */
 }
 
 .person-section {
@@ -35,7 +25,9 @@ The 'about.html' page uses this css.
   float: left;
   width: 91vw;
   height: 24vw;
-  background: #004785;
+  background: var(--fg-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
 }
 
 .person-section img {

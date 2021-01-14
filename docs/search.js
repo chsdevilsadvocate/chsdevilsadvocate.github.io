@@ -1,28 +1,20 @@
 /*
-███████╗███████╗ █████╗ ██████╗  ██████╗██╗  ██╗
-██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝██║  ██║
-███████╗█████╗  ███████║██████╔╝██║     ███████║
-╚════██║██╔══╝  ██╔══██║██╔══██╗██║     ██╔══██║
-███████║███████╗██║  ██║██║  ██║╚██████╗██║  ██║
-╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
-
 Create the search feature in the menubar.
 */
 
 let searchOpen = false; // The user has not opened the search feature yet.
 
 function openSearch() {
-  searchButton = document.getElementById('search');
+  rightButtons = document.getElementsByClassName('right');
   searchbar = (document.getElementsByClassName('searchbar'))[0];
 
-  searchButton.style.transition = 'transform 1s';
+  for (button of rightButtons) button.style.transition = 'transform 1s';
   searchbar.style.transition = 'transform 1s';
 
   if (searchOpen == false) {
-    searchOpen = true;
+    searchOpen = true; 
 
-    searchButton.style.transform = 'translateX(-24vw)';
-    searchButton.style.WebkitTransform = 'translateX(-24vw)'; // This is for opera.  It needs webkit.
+    for (button of rightButtons) { button.style.transform = 'translateX(-24vw)'; button.style.WebkitTransform = 'translateX(-24vw)' }
 
     searchbar.style.transform = 'translate(26vw, 0vw)';
     searchbar.style.WebkitTransform = 'translate(26vw, 0vw)'; // This is for opera.  It needs webkit.
@@ -30,8 +22,7 @@ function openSearch() {
   } else {
     searchOpen = false;
 
-    searchButton.style.transform = 'translateX(0vw)';
-    searchButton.style.WebkitTransform = 'translateX(0vw)'; // This is for opera.  It needs webkit.
+    for (button of rightButtons) { button.style.transform = 'translateX(0vw)'; button.style.WebkitTransform = 'translateX(0vw)' }
 
     searchbar.style.transform = 'translate(50vw, 0vw)';
     searchbar.style.WebkitTransform = 'translate(50vw, 0vw)'; // This is for opera.  It needs webkit.

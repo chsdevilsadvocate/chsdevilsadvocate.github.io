@@ -1,20 +1,36 @@
 /*
-::::    ::::      :::     ::::::::::: ::::    ::: 
-+:+:+: :+:+:+   :+: :+:       :+:     :+:+:   :+: 
-+:+ +:+:+ +:+  +:+   +:+      +:+     :+:+:+  +:+ 
-+#+  +:+  +#+ +#++:++#++:     +#+     +#+ +:+ +#+ 
-+#+       +#+ +#+     +#+     +#+     +#+  +#+#+# 
-#+#       #+# #+#     #+#     #+#     #+#   #+#+# 
-###       ### ###     ### ########### ###    #### 
-
 Every page uses this default css.
 */
 
 /* Define the hyperlegible font as a custom font face. */
 @font-face {
-  font-family: hyperlegibleAtkinson;
-  font-display: swap;
+  font-family: hyperlegible-atkinson;
   src: url(fonts/Atkinson-Hyperlegible-Regular-102.ttf);
+}
+
+@font-face {
+  font-family: illegible-atkinson;
+  src: url(fonts/Atkinson-Illegible.ttf);
+}
+
+/* Define custom CSS variables. */
+:root {
+  --bg-color: #58A5D9;
+  --bg-image: url('images/bg.png');
+
+  --fg-color: #004785;
+  --fg-backdrop-filter: none; /* This only works with chromium for now. */
+
+  --text-color: white;
+  --text-font: hyperlegible-atkinson;
+
+  --menubar-color: #333333;
+  --hover-menubar-color: #696969;
+  --select-menubar-color: #3366DD;
+  --hover-text-color: black;
+
+  --button-color: #00325E;
+  --hover-button-color: #001D37;
 }
 
 html {
@@ -31,12 +47,20 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   /* Font stuff. */
-  font-family: hyperlegibleAtkinson, sans-serif;
+  font-family: var(--text-font), sans-serif;
   /* Background stuff. */
-  background-color: #58A5D9;
-  background-image: url('images/bg.png');
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
   background-size: 75%;
   background-repeat: repeat;
   /* Text color. */
-  color: white;
+  color: var(--text-color);
+}
+
+code {
+  background: var(--button-color);
+}
+
+* {
+  font-family: var(--text-font), sans-serif;
 }

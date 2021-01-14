@@ -1,0 +1,201 @@
+<!-- Do not include doctype here, because it breaks line height. -->
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> <!-- Include fontawesome icons. -->
+      <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Add Favicon -->
+      <meta name="viewport" content="width=device-width" user-scalable="no">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+      <script src="settingsMenubar.js"></script>
+      <script src="settings.js"></script>
+      <script src="theme.js"></script>
+      <script src="data.js"></script>
+      <script src="search.js"></script>
+      <script src="convert.js"></script>
+      <link rel="stylesheet" href="main.css">
+      <link rel="stylesheet" href="settings.css">
+      <link rel="stylesheet" href="menubar.css">
+      <link rel="stylesheet" href="slideshow.css">
+      <link rel="stylesheet" href="footer.css">
+      <link rel="stylesheet" href="scrollbar.css">
+      <link rel="stylesheet" href="ie.css">
+  </head>
+  <body onload="noThemeToDefaultTheme(); theme(); articleData(); settingsMenubar(); showOptions(); highlightButton(); onSettingsLoad(); convert();">
+
+    <!------------------------------------------------------>
+    <!--                     Menu Bar                     -->
+    <!------------------------------------------------------>
+
+    <div class="menu-bg"></div> <!-- God, I hate Edge.  This makes the top bar flow to the 12px scrollbar instead of 17px. -->
+    <div style="margin: -4vw;"></div>
+    <div class="menubar">
+      <a href="home.html"><p>Home</p></a>
+      <a href="about.html"><p>About</p></a>
+      <a href="archive.html?genre=events"><p>Events</p></a>
+      <a href="archive.html?genre=interviews"><p>Interviews</p></a>
+      <a href="archive.html?genre=reviews"><p>Reviews</p></a>
+      <a href="archive.html?genre=sports"><p>Sports</p></a>
+      <a href="archive.html?genre=arts"><p>Arts</p></a>
+      <a href="archive.html?genre=opinion"><p>Opinion</p></a>
+      <a href="archive.html?genre=other"><p>Other</p></a>
+      <a href="archive.html?genre=all"><p>Archive</p></a>
+      <a onclick="openSearch();" class="right" id="search">
+        <i class="fas fa-search"></i>
+      </a>
+      <a href="settings.html" class="right" id="settings">
+        <i class="fas fa-cog"></i>
+      </a>
+      
+      <input class="searchbar" type="text" placeholder="Search..." onkeydown="search(this)"></input>
+    </div>
+
+    <!------------------------------------------------------>
+    <!--                       Body                       -->
+    <!------------------------------------------------------>
+
+    <div class="special-width-container" style="width: 100vw;">
+      <div class="blurb">
+        <h1>Settings:</h1>
+        <p>Use these settings to customize the look of the site for easier reading!  Settings on this page are saved securely in your browser's cache.  This website will never store any of your personal information about your session online.</p>
+      </div>
+
+      <div class="settings">
+        <div class="presets">
+          <h1>Theme Presets:</h1>
+          <div class="buttons">
+            <div class="row">
+              <button onclick="toDefaultTheme(); theme();">Default</button>
+              <button onclick="toDarkTheme(); theme();">Dark</button>
+            </div>
+            <div class="row">
+              <button onclick="toGlassTheme(); theme();">Glass</button>
+              <button onclick="toWednesdayTheme(); theme();">Wednesday</button>
+            </div>  
+<!--        <div class="row">
+              <button onclick="toAutumnalTheme(); theme();">Autumnal</button>
+              <button onclick="toHolidayTheme(); theme();">Holiday</button>
+            </div> -->
+<!--        <div class="row">
+              <button class="long" onclick="toCustomTheme(); theme();">Custom</button>
+            </div> -->
+          </div>
+        </div>
+        <div class="options">
+          <h1>Theme Options:</h1>
+          <div class="buttons">
+            <div class="row">
+              <label class="option custom" for="background-color">Background Color:</label>
+              <input class="option custom" id="background-color" placeholder="#ABCDEF" oninput="toCustomTheme(); theme();">
+            </div>
+            <div class="row">
+              <button class="option" id="toggle-background-image" onclick="toggleBackgroundImage();">Disable Background Image</button>
+            </div>
+            <div class="row">
+              <label class="option custom" for="foreground-color">Foreground Color:</label>
+              <input class="option custom" id="foreground-color" placeholder="#ABCDEF" oninput="toCustomTheme(); theme();">
+            </div>
+            <!-- Foreground Filter Selector  -->
+            <div class="row">
+              <label class="option custom" for="menubar-color">Menubar Color:</label>
+              <input class="option custom" id="menubar-color" placeholder="#ABCDEF" oninput="toCustomTheme(); theme();">
+            </div>
+            <div class="row">
+              <label class="option custom" for="selected-menubar-color">Selected Menubar Color:</label>
+              <input class="option custom" id="selected-menubar-color" placeholder="#ABCDEF" oninput="toCustomTheme(); theme();">
+            </div>
+            <div class="row">
+              <label class="option custom" for="hover-menubar-color">Hover Menubar Color:</label>
+              <input class="option custom" id="hover-menubar-color" placeholder="#ABCDEF" oninput="toCustomTheme(); theme();">
+            </div>
+            <div class="row">
+              <label class="option custom" for="hover-menubar-text-color">Hover Menubar Text Color:</label>
+              <input class="option custom" id="hover-menubar-text-color" placeholder="#ABCDEF" oninput="toCustomTheme(); theme();">
+            </div>
+            <div class="row">
+              <label class="option custom" for="default-text-color">Default Text Color:</label>
+              <input class="option custom" id="default-text-color" placeholder="#ABCDEF" oninput="toCustomTheme(); theme();">
+            </div>
+            <div class="row">
+              <button class="option" id="toggle-distinct-zeros" onclick="toggleDistinctZeros();">Disable Distinct Zeros (0)</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="blurb">
+        <h1>Writers' Zone:</h1>
+        <p>This section is intended only to be used by writers and editors of the Devil's Advocate for article conversion.  If you would like to learn more, join the Devil's Advocate Google Classroom with the code uhea4cu.</p>
+      </div>
+
+      <div class="da-zone">
+
+        <div class="side">
+          <h1>Input:</h1>
+          <div class="row">
+            <h2>Title:</h2>
+            <input id="name" class="words" placeholder="Your Article's Title">
+          </div>
+          <div class="row">
+            <h2>Author:</h2>
+            <input id="author" class="words" placeholder="Your First and Last Name">
+          </div>
+          <div class="row">
+            <h2>Date:</h2>
+            <div class="container">
+              <input class="date" maxlength="2" placeholder="month">
+              <h3>/</h3>
+              <input class="date" maxlength="2" placeholder="day">
+              <h3>/</h3>
+              <input class="date" maxlength="4" placeholder="year">
+            </div>
+          </div>
+          <div class="row">
+            <h2>Genres:</h2>
+            <div class="vertical-container">
+              <div class="container">
+                <button class="genre-button">Events</button>
+                <button class="genre-button">Interviews</button>
+                <button class="genre-button" style="margin-right: 0 !important;">Reviews</button>
+              </div>
+              <div class="container">
+                <button class="genre-button">Sports</button>
+                <button class="genre-button">Arts</button>
+                <button class="genre-button">Opinion</button>
+                <button class="genre-button" style="margin-right: 0 !important;">Other</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h2>Tags:</h2>
+            <input id="tags" class="words" placeholder="a list of tags separated by spaces">
+          </div>
+          <div class="row">
+            <h2>Callout:</h2>
+            <textarea id="callout" class="callout" placeholder="A relevant quotation from your article."></textarea>
+          </div>
+          <div class="row">
+            <h2>Text:</h2>
+            <textarea id="text" class="text" placeholder="The full text of your article."></textarea>
+          </div>
+        </div>
+
+        <div class="side" style="margin-left: 0vw !important;">
+          <h1>Output:</h1>
+          <textarea class="output" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!------------------------------------------------------>
+    <!--                  Closing Stuff                   -->
+    <!------------------------------------------------------>
+
+    <div class="copyright-footer">
+      <p>Copyright © 2021 Benson Haley and Columbia High School's <i>Devil's Advocate</i></p>
+    </div>
+
+  </body>
+</html>

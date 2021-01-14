@@ -1,12 +1,4 @@
 /*
-:::    :::  ::::::::  ::::    ::::  :::::::::: 
-:+:    :+: :+:    :+: +:+:+: :+:+:+ :+:        
-+:+    +:+ +:+    +:+ +:+ +:+:+ +:+ +:+        
-+#++:++#++ +#+    +:+ +#+  +:+  +#+ +#++:++#   
-+#+    +#+ +#+    +#+ +#+       +#+ +#+        
-#+#    #+# #+#    #+# #+#       #+# #+#        
-###    ###  ########  ###       ### ########## 
-
 The 'home.html' page uses this css.
 */
 
@@ -20,7 +12,9 @@ The 'home.html' page uses this css.
   float: left;
   width: 29vw;
   height: inherit;
-  background: #004785;
+  background: var(--fg-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
   overflow-y: auto;
 }
 
@@ -58,7 +52,9 @@ The 'home.html' page uses this css.
   float: left;
   width: 91vw;
   height: 4vw;
-  background: #004785;
+  background: var(--fg-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
 }
 
 .join p {
@@ -76,7 +72,7 @@ The 'home.html' page uses this css.
   float: left;
   width: 19.75vw;
   height: inherit;
-  background: #004785;
+  background: var(--fg-color);
   text-align: justify;
   overflow: hidden;
   margin-bottom: 8vw;
@@ -114,7 +110,7 @@ The 'home.html' page uses this css.
 .random-article a {
   display: inline;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   overflow: hidden;
   font-size: 1.2vw;
   line-height: 1.2vw; /* TODO: Fix the bug where line height is changed from zooming. */

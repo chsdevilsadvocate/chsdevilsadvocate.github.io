@@ -1,12 +1,4 @@
 /*
-    :::     :::::::::  ::::::::::: :::::::::::  ::::::::  :::        :::::::::: 
-  :+: :+:   :+:    :+:     :+:         :+:     :+:    :+: :+:        :+:        
- +:+   +:+  +:+    +:+     +:+         +:+     +:+        +:+        +:+        
-+#++:++#++: +#++:++#:      +#+         +#+     +#+        +#+        +#++:++#   
-+#+     +#+ +#+    +#+     +#+         +#+     +#+        +#+        +#+        
-#+#     #+# #+#    #+#     #+#         #+#     #+#    #+# #+#        #+#        
-###     ### ###    ###     ###     ###########  ########  ########## ########## 
-
 The 'article.html' page uses this css.
 */
 
@@ -14,7 +6,9 @@ The 'article.html' page uses this css.
   display: block;
   margin: 4vw 2vw 8vw 4vw;
   width: 58vw;
-  background: #004785;
+  background: var(--fg-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
   float: left;
 }
 
@@ -75,19 +69,60 @@ The 'article.html' page uses this css.
   z-index: 10; /* Put this in front of the image. */
 }
 
-.text p {
-  padding: 2vw;
-  margin: 0;
+/* Select all children of text. */
+.text > * {
+  margin: 2vw;
+  margin-bottom: 0;
+  text-indent: 2vw;
   font-size: 1.4vw;
   line-height: 1.5;
   text-align: justify;
+}
+
+/* Add special padding to the last element. */
+.text :last-child {
+  margin-bottom: 2vw;
+}
+
+.text ol {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.text ul {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.text li {
+  text-indent: 1vw;
+}
+
+.text h1 {
+  font-size: 2.6vw;
+  text-indent: 0;
+  margin-bottom: -2vw;
+  text-align: left;
+}
+
+.text h2, h3, h4, h5, h6 {
+  font-size: 2.0vw;
+  text-indent: 0;
+  margin-bottom: -2vw;
+  text-align: left;
+}
+
+.no-indent {
+  text-indent: 0;
 }
 
 .sidebar {
   display: block;
   margin: 4vw 4vw 2vw 2vw;
   width: 29vw;
-  background: #004785;
+  background: var(--fg-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
   float: left;
   height: auto;
 }
@@ -96,7 +131,7 @@ The 'article.html' page uses this css.
   margin-left: 2vw;
   width: 25vw;
   height: 25vw;
-  background: #003566;
+  background: var(--button-color);
 }
 
 /**********************/
@@ -109,7 +144,7 @@ The 'article.html' page uses this css.
   float: left;
   width: 25vw;
   height: 25vw;
-  background: #004785;
+  background: var(--fg-color);
   text-align: justify;
   overflow: hidden;
   margin-bottom: 0;
@@ -146,7 +181,7 @@ The 'article.html' page uses this css.
 .random-article a {
   display: inline;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   overflow: hidden;
   font-size: 1.6vw;
   line-height: 1.6vw; /* TODO: Fix the bug where line height is changed from zooming. */

@@ -1,12 +1,4 @@
 /*
-::::    ::::  :::::::::: ::::    ::: :::    ::: :::::::::      :::     :::::::::  
-+:+:+: :+:+:+ :+:        :+:+:   :+: :+:    :+: :+:    :+:   :+: :+:   :+:    :+: 
-+:+ +:+:+ +:+ +:+        :+:+:+  +:+ +:+    +:+ +:+    +:+  +:+   +:+  +:+    +:+ 
-+#+  +:+  +#+ +#++:++#   +#+ +:+ +#+ +#+    +:+ +#++:++#+  +#++:++#++: +#++:++#:  
-+#+       +#+ +#+        +#+  +#+#+# +#+    +#+ +#+    +#+ +#+     +#+ +#+    +#+ 
-#+#       #+# #+#        #+#   #+#+# #+#    #+# #+#    #+# #+#     #+# #+#    #+# 
-###       ### ########## ###    ####  ########  #########  ###     ### ###    ### 
-
 Every page uses this css for the menubar.
 */
 
@@ -24,7 +16,9 @@ Every page uses this css for the menubar.
   height: 4vw;
   width: 100%;
   overflow: hidden;
-  background-color: #333333;
+  background-color: var(--menubar-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
   position: fixed;
   top: 0;
   z-index: 999;
@@ -42,20 +36,22 @@ Every page uses this css for the menubar.
   text-align: center;
   text-decoration: none; /* This gets rid of the underline for the links. */
   font-size: 1vw;
-  color: #f2f2f2;
+  color: var(--text-color);
 }
 
-/* Only for the search bar, which is better than the other things. */
-.menubar a[id="search"] {
+/* Only for the search and settings buttons. */
+a.right {
   float: right;
   padding: 0vw 0vw;
   width: 4vw;
   transition: transform 1s;
+  font-size: 1.2vw;
 }
 
 .menubar a:hover {
-  background-color: #696969;
-  color: #000000;
+  background-color: var(--hover-menubar-color);
+  color: var(--hover-text-color);
+  cursor: pointer;
 }
 
 .searchbar {
@@ -68,6 +64,7 @@ Every page uses this css for the menubar.
   border-radius: 1vw;
   padding: 1vw;
   font-size: 1vw;
+  font-family: var(--text-font), sans-serif;
 }
 
 /* Remove the weird focus outline. */

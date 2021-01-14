@@ -1,11 +1,4 @@
 /*
- █████╗ ██████╗  ██████╗██╗  ██╗██╗██╗   ██╗███████╗
-██╔══██╗██╔══██╗██╔════╝██║  ██║██║██║   ██║██╔════╝
-███████║██████╔╝██║     ███████║██║██║   ██║█████╗  
-██╔══██║██╔══██╗██║     ██╔══██║██║╚██╗ ██╔╝██╔══╝  
-██║  ██║██║  ██║╚██████╗██║  ██║██║ ╚████╔╝ ███████╗
-╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝  ╚══════╝
-
 This gets all the data set up in order to load an archive in 'archive.html'.
 */
 
@@ -13,7 +6,10 @@ function loadArchive() {
   
   const urlString = window.location.href; // The variable 'urlString' is the string of the url.
   const url = new URL(urlString); // Create a new URL object from that string.
-  const genreParameter = url.searchParams.get('genre'); // Get the parameter for 'genre='.
+  let genreParameter = url.searchParams.get('genre'); // Get the parameter for 'genre='.
+
+  // If the genre parameter doesn't exist, just make it all so the page doesn't break when loading.
+  if (genreParameter == null) { genreParameter = 'all' }
 
   const keys = Object.keys(articles); // Create array of key names (article ids).
 
@@ -60,6 +56,6 @@ function loadArchive() {
 
   // Set the menubar colors correctly.
   let selectedMenubarItem = (document.querySelectorAll("a[href='archive.html?genre=" + genreParameter + "']"))[0]; // Get the selected menubar item.
-  selectedMenubarItem.style.backgroundColor = '#4169e1';
-  selectedMenubarItem.style.color = '#000000';
+  selectedMenubarItem.style.backgroundColor = 'var(--select-menubar-color)';
+  selectedMenubarItem.style.color = 'var(--text-color)';
 }

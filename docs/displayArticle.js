@@ -1,11 +1,4 @@
 /*
-██████╗ ██╗███████╗██████╗ ██╗      █████╗ ██╗   ██╗      █████╗ ██████╗ ████████╗██╗ ██████╗██╗     ███████╗
-██╔══██╗██║██╔════╝██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝     ██╔══██╗██╔══██╗╚══██╔══╝██║██╔════╝██║     ██╔════╝
-██║  ██║██║███████╗██████╔╝██║     ███████║ ╚████╔╝      ███████║██████╔╝   ██║   ██║██║     ██║     █████╗  
-██║  ██║██║╚════██║██╔═══╝ ██║     ██╔══██║  ╚██╔╝       ██╔══██║██╔══██╗   ██║   ██║██║     ██║     ██╔══╝  
-██████╔╝██║███████║██║     ███████╗██║  ██║   ██║        ██║  ██║██║  ██║   ██║   ██║╚██████╗███████╗███████╗
-╚═════╝ ╚═╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝        ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝╚══════╝╚══════╝
-
 This is all the javascript required for 'article.html'.
 */
 
@@ -19,7 +12,7 @@ function displayArticle() {
   const article = articles[articleParameter]; // The articles with that article parameter is set to the variable 'article'.
 
   let textDiv = (document.getElementsByClassName("text"))[0]; // Get the div to put the body text in.
-  textDiv.innerHTML = '<p>' + article.text + '</p>'; // Set the text for the body text div.
+  textDiv.innerHTML = article.text; // Set the text for the body text div.
   let headerDiv = (document.getElementsByClassName("header"))[0]; // Get the div to put the title in.
   // Put the title in the title div.  If there's an image, ad that, otherwise, put the genre-specific image in.
   if (article.image != undefined) {

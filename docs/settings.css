@@ -1,0 +1,237 @@
+/*
+The settings page (gear button) uses this css.
+*/
+
+.blurb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 4vw 4vw 2vw 4vw;
+  float: left;
+  width: 91vw;
+  height: 8vw;
+  background: var(--fg-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
+  overflow-y: auto;
+}
+
+.blurb h1 {
+  float: left;
+  margin: 0vw 2vw 0vw 2vw;
+  font-size: 3vw;
+  white-space: nowrap;
+}
+
+.blurb p {
+  font-size: 1.4vw;
+  margin-right: 2vw;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: center;
+  margin: 2vw 4vw 0vw 4vw;
+  float: left;
+  width: 91vw;
+}
+
+.settings div {
+  display: flex;
+  align-items: center;
+  width: 43.5vw;
+  background-color: var(--fg-color);
+  
+  backdrop-filter: var(--fg-backdrop-filter);
+  
+}
+
+.settings h1 {
+  font-size: 3vw;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  align-items: flex-start !important;
+  flex-direction: column;
+  margin-bottom: 0vw;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+}
+
+.buttons * {
+  font-size: 1.4vw;
+  padding: 1vw 1vw 1vw 1vw;
+  margin: 0vw 0vw 2vw 2vw;
+}
+
+.buttons button {
+  width: 100%;
+  border: 0;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  outline: none;
+  cursor: pointer;
+}
+
+.custom {
+  display: none;
+}
+
+button:hover {
+  background-color: var(--hover-button-color) !important;
+  outline: none;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+  width: 41.5vw !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+}
+
+.presets {
+  margin-right: 4vw;
+  margin-bottom: 0vw;
+  flex-direction: column;
+}
+
+.options {
+  margin-bottom: 4vw;
+  margin-bottom: 0vw;
+  flex-direction: column;
+}
+
+
+.buttons label {
+  font-size: 1.4vw;
+  white-space: nowrap;
+  padding: 1vw 0vw 1vw 0vw;
+  width: 100%;
+}
+
+.buttons input {
+  width: 100%;
+  padding: 1vw;
+  margin: 0vw 0vw 2vw 0vw;
+  height: 4vw;
+  border: 0;
+}
+
+.da-zone {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: center;
+  margin: 2vw 4vw 8vw 4vw;
+  float: left;
+  width: 91vw;
+  background-color: var(--fg-color);
+  backdrop-filter: var(--fg-backdrop-filter);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2vw 2vw 2vw 2vw;
+  float: left;
+  width: 42.5vw;
+}
+
+.side h1 {
+  font-size: 3vw;
+  margin: 0;
+}
+
+.side .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side h2 {
+  font-size: 1.4vw;
+  margin-right: 1vw;
+}
+
+.side input {
+  border: none;
+  padding: 0.5vw;
+  width: 35vw;
+  font-size: 1.4vw;
+  font-family: var(--text-font), sans-serif;
+}
+
+.words {
+  height: 3vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 35vw;
+}
+
+.date {
+  width: 6vw !important;
+  text-align: center;
+  height: 3vw;
+}
+
+h3 {
+  font-size: 3vw;
+  margin: 0;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container button {
+  width: 100%;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+  margin-right: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+  border: 0;
+  background-color: var(--button-color);
+  font-size: 1.4vw;
+  color: var(--text-color);
+  outline: none;
+  cursor: pointer;
+}
+
+textarea {
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+  border: none;
+  padding: 0.5vw;
+  width: 35vw;
+  font-size: 1.4vw;
+  font-family: var(--text-font), sans-serif;
+  resize: none;
+}
+
+.callout {
+  height: 9vw;
+}
+
+.text {
+  height: 21vw;
+}
+
+.output {
+  height: 100%;
+  width: 100%;
+}
