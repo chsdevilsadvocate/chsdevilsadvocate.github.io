@@ -12,6 +12,17 @@ This pulls article markdown files into a json file that is then turned into a gl
 function articleData() {
 
     const data = `{
+    "tips-to-relieve-stress-for-tests-and-finals": {
+        "author": "Anonymous",
+        "callout": "These tips can help with de-stressing before your test, but just remember that it isn’t life or death.",
+        "date": "1/16/2021",
+        "genres": [
+            "other"
+        ],
+        "name": "Tips to Relieve Stress for Tests and Finals ",
+        "tags": "final midterm exam test study studying school",
+        "text": "<p>With Midterms right around the corner, we are all stressed. Here are a few tips you can use to help you with alleviating that stress and anxiety. </p><ul><li>Exercise</li><li>Take a walk outside for some fresh air</li><li>Get a full 8 hours of sleep</li><li>Listen to your favorite music while studying</li><li>Take breaks (not too long though)</li><li>Take a hot shower or bath</li><li>Light a nice smelling candle</li><li>During your test, you can also chew gum or suck on a hard candy of your choosing</li><li>Talk to your teachers about any questions you have</li></ul><p>These tips can help with de-stressing before your test, but just remember that it isn’t life or death. This too shall pass and you can think back on it in the future and laugh about how stressed you were. </p><p class='no-indent'>Below is the schedule for the next week. Remember to breathe!</p><h2>No School Monday</h2><h2>Tuesday, January 19 and Friday, January 22</h2><p>Periods 1, 2, 3, and 4 meet to give a midterm exam/final exam or in some instances to provide live virtual instruction. </p><ul><li>Period 1: Exam Session #1 7:30 AM – 8:45 AM (75 minutes) </li><li>Period 2: Exam Session #2 9:15 AM – 10:30 AM (75 minutes) </li><li>Period 3: Exam Session #3 11:00 AM – 12:15 PM (75 minutes) </li><li>Period 4: Exam Session #4 12:45 PM – 2:00 PM (75 minutes)</li></ul><h2>Wednesday, January 20 and Thursday, January 21</h2><p>Periods 5, 6, 7, and 8 meet to give a midterm exam/final exam or in some instances to provide live virtual instruction.</p><ul><li>Period 5: Exam Session #1 7:30 AM – 8:45 AM (75 minutes)</li><li>Period 6: Exam Session #2 9:15 AM – 10:30 AM (75 minutes) </li><li>Period 7: Exam Session #3 11:00 AM – 12:15 PM (75 minutes) </li><li>Period 8: Exam Session #4 12:45 PM – 2:00 PM (75 minutes)</li></ul>"
+    },
     "4-things-you-may-not-have-watched-during-quarantine": {
         "author": "Morgen Doyle",
         "callout": "Seriously go watch it. (All six seasons on Hulu)",

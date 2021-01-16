@@ -95,7 +95,7 @@ The 'article.html' page uses this css.
 }
 
 .text li {
-  text-indent: 1vw;
+  text-indent: 0vw;
 }
 
 .text h1 {
