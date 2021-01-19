@@ -53,3 +53,7 @@ p.even {
 p.final {
   text-align: center;
 }
+
+.person-section:last-child {
+  margin-bottom: 8vw;
+}
